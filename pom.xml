@@ -8,14 +8,16 @@
         <version>1.10-SNAPSHOT</version>
     </parent>
 
-    <groupId>sample-jspringbot</groupId>
-    <artifactId>sample-jspringbot</artifactId>
-    <version>1.0</version>
+    <groupId>com.github.hi-fi</groupId>
+    <artifactId>robotframework-seleniumlibrary</artifactId>
+    <version>3.141.59.26535-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>sample-jspringbot</name>
 
     <properties>
-
+        <robotframework.maven.plugin.version>1.5.1</robotframework.maven.plugin.version>
+        <robotframework.version>3.1.1</robotframework.version>
+        <selenium.version>3.141.59</selenium.version>
+        <keywords.class>SeleniumLibrary</keywords.class>
         <selenium.profile>chrome</selenium.profile>
     </properties>
 
@@ -62,13 +64,26 @@
             <artifactId>jspringbot-expression</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jspringbot</groupId>
-            <artifactId>jspringbot-selenium</artifactId>
+            <groupId>org.robotframework</groupId>
+            <artifactId>robotframework</artifactId>
+            <version>${robotframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${selenium.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jspringbot</groupId>
             <artifactId>jspringbot-config</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.hi-fi</groupId>
+            <artifactId>robotframework-seleniumlibrary</artifactId>
+            <version>3.141.59.2653</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
 
 </project>
